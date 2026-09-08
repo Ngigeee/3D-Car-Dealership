@@ -1,0 +1,48 @@
+{
+  "name": "cardealerapp",
+  "version": "1.0.0",
+   "author": "Dante M.", 
+  "description": "Car dealership app using MySQL",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "build": "electron-builder"
+  },
+  "dependencies": {
+    "bcrypt": "^5.1.1",
+    "bcryptjs": "^3.0.2",
+    "body-parser": "^1.20.3",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "express-session": "^1.18.1",
+    "express-validator": "^7.2.1",
+    "multer": "^1.4.5-lts.2",
+    "mysql2": "^3.14.0",
+    "nodemon": "^3.1.9",
+    "promise": "^8.3.0",
+    "socket.io": "^4.8.1"
+  },
+  "devDependencies": {
+    "electron-builder": "^24.3.0"
+  },
+  "build": {
+    "appId": "com.yourcompany.cardealerapp",
+    "productName": "CarDealerApp",
+    "directories": {
+      "buildResources": "assets"
+    },
+    "files": [
+      "**/*",
+      "!node_modules/.cache",
+      "!**/*.log"
+    ],
+    "linux": {
+      "target": "AppImage",
+      "icon": "assets/icon.png"
+    },
+    "win": {
+      "target": "nsis",
+      "icon": "assets/icon.ico"
+    }
+  }
+}
